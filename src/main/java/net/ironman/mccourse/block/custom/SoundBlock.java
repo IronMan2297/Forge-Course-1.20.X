@@ -24,21 +24,21 @@ public class SoundBlock extends Block {
         super(pProperties);
     }
 
-    @Override
-    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
-                                 Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        if(!pLevel.isClientSide() && pHand == InteractionHand.MAIN_HAND) {
-            if(pPlayer.isCrouching()) {
-                pLevel.playSound(null, pPos, SoundEvents.NOTE_BLOCK_BANJO.get(), SoundSource.BLOCKS,1f,1f);
-                return InteractionResult.SUCCESS;
-            } else {
-                pLevel.playSound(null, pPos, SoundEvents.NOTE_BLOCK_COW_BELL.get(), SoundSource.BLOCKS,1f,1f);
-                return InteractionResult.CONSUME;
-            }
-        }
+   //@Override
+   //public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
+   //                             Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+   //    if(!pLevel.isClientSide() && pHand == InteractionHand.MAIN_HAND) {
+   //        if(pPlayer.isCrouching()) {
+   //            pLevel.playSound(null, pPos, SoundEvents.NOTE_BLOCK_BANJO.get(), SoundSource.BLOCKS,1f,1f);
+   //            return InteractionResult.SUCCESS;
+   //        } else {
+   //            pLevel.playSound(null, pPos, SoundEvents.NOTE_BLOCK_COW_BELL.get(), SoundSource.BLOCKS,1f,1f);
+   //            return InteractionResult.CONSUME;
+   //        }
+   //    }
 
-        return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
-    }
+   //    return super.use(pState, pLevel, pPos, pPlayer, pHand, pHit);
+   //}
 
     @Override
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
