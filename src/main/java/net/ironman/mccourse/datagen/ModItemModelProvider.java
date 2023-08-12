@@ -27,13 +27,18 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.METAL_DETECTOR);
         simpleItem(ModItems.PEAT_BRICK);
 
-        simpleItem(ModItems.ALEXANDRITE_SWORD);
-        simpleItem(ModItems.ALEXANDRITE_PICKAXE);
-        simpleItem(ModItems.ALEXANDRITE_AXE);
-        simpleItem(ModItems.ALEXANDRITE_SHOVEL);
-        simpleItem(ModItems.ALEXANDRITE_HOE);
-        simpleItem(ModItems.ALEXANDRITE_PAXEL);
-        simpleItem(ModItems.ALEXANDRITE_HAMMER);
+        handHeldItem(ModItems.ALEXANDRITE_SWORD);
+        handHeldItem(ModItems.ALEXANDRITE_PICKAXE);
+        handHeldItem(ModItems.ALEXANDRITE_AXE);
+        handHeldItem(ModItems.ALEXANDRITE_SHOVEL);
+        handHeldItem(ModItems.ALEXANDRITE_HOE);
+        handHeldItem(ModItems.ALEXANDRITE_PAXEL);
+        handHeldItem(ModItems.ALEXANDRITE_HAMMER);
+
+        //simpleItem(ModItems.ALEXANDRITE_HELMET);
+        //simpleItem(ModItems.ALEXANDRITE_CHESTPALTE);
+        //simpleItem(ModItems.ALEXANDRITE_LEGGINGS);
+        //simpleItem(ModItems.ALEXANDRITE_BOOTS);
 
         buttonItem(ModBlocks.ALEXANDRITE_BUTTON, ModBlocks.ALEXANDRITE_BLOCK);
         fenceItem(ModBlocks.ALEXANDRITE_FENCE, ModBlocks.ALEXANDRITE_BLOCK);
