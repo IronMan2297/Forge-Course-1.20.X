@@ -44,6 +44,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //simpleItem(ModItems.DATA_TABLET);
         simpleItem(ModItems.KOHLRABI_SEEDS);
+        simpleItem(ModItems.BAR_BRAWL_RECORD);
 
         buttonItem(ModBlocks.ALEXANDRITE_BUTTON, ModBlocks.ALEXANDRITE_BLOCK);
         fenceItem(ModBlocks.ALEXANDRITE_FENCE, ModBlocks.ALEXANDRITE_BLOCK);
@@ -51,6 +52,13 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleBlockItem(ModBlocks.ALEXANDRITE_DOOR);
         simpleBlockItem(ModBlocks.SNAPDRAGON);
+
+        complexBlock(ModBlocks.GEM_EMPOWERING_STATION.get());
+    }
+
+    private ItemModelBuilder complexBlock(Block block) {
+        return withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(), new ResourceLocation(MCCourseMod.MOD_ID,
+                "block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
     }
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {

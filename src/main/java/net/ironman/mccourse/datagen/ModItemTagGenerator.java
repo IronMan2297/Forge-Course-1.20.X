@@ -26,6 +26,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                         ModItems.ALEXANDRITE_CHESTPALTE.get(),
                         ModItems.ALEXANDRITE_LEGGINGS.get(),
                         ModItems.ALEXANDRITE_BOOTS.get());
+
+        this.tag(ItemTags.MUSIC_DISCS)
+                .add(ModItems.BAR_BRAWL_RECORD.get());
     }
 
     @Override

@@ -1,4 +1,4 @@
-// 1.20.1	2023-08-13T22:08:20.1356398	Block States: mccourse
+// 1.20.1	2023-08-13T23:17:45.9061008	Block States: mccourse
 9b0f59e6a967af477e6f41100bfecb754add6ea2 assets/mccourse/blockstates/alexandrite_block.json
 1fd0895b9aa0e87b67d2c4da0f567f8aa895de30 assets/mccourse/blockstates/alexandrite_button.json
 974428f15970c224b76ef992df827ba4718bb490 assets/mccourse/blockstates/alexandrite_door.json
@@ -13,6 +13,7 @@ e4fc007d0d52690c5058dad0dd038175362c0079 assets/mccourse/blockstates/alexandrite
 aa4167edb1a90218a2772cfe5e8529a7b7a67d6d assets/mccourse/blockstates/alexandrite_wall.json
 8fcc4611978185a7f05bf9d92311c83a7c2c011f assets/mccourse/blockstates/deepslate_alexandrite_ore.json
 71a95554c814e8d60754725b9f9c9ddd7600b386 assets/mccourse/blockstates/end_stone_alexandrite_ore.json
+3c28ba1f863da5c3b3f34b859c96c58814bd2e77 assets/mccourse/blockstates/gem_empowering_station.json
 98de054e3d7b91ae136d74698f9bf9b2e9f93841 assets/mccourse/blockstates/kohlrabi_crop.json
 64817565a0fa2c6f960c783edeb5fa2a8dc966ac assets/mccourse/blockstates/nether_alexandrite_ore.json
 2bd9f6ab9904321d645967996ac17eae68f3399c assets/mccourse/blockstates/raw_alexandrite_block.json
@@ -76,5 +77,4 @@ a1e7e690537f78b97a5c7dbaf1b6f920341f0744 assets/mccourse/models/item/alexandrite
 f0a94a401e77a08cf969f8061b69dd445dac853d assets/mccourse/models/item/end_stone_alexandrite_ore.json
 9279bb61d216f91c2724f131cbf7b373e63aa547 assets/mccourse/models/item/nether_alexandrite_ore.json
 b5fac3d0e039ec5e36c46df4560884ec2b4915b7 assets/mccourse/models/item/raw_alexandrite_block.json
-08326b6ad28b1b745c37f2dd86b29f0bd19a9167 assets/mccourse/models/item/snapdragon.json
 3c8bf07f319757774147c8565c5c771276af1932 assets/mccourse/models/item/sound_block.json

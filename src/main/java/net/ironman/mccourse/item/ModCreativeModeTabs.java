@@ -32,6 +32,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ALEXANDRITE_HOE.get());
                         output.accept(ModItems.ALEXANDRITE_PAXEL.get());
                         output.accept(ModItems.ALEXANDRITE_HAMMER.get());
+                        output.accept(ModItems.RADIATION_STAFF.get());
+                        output.accept(ModItems.ALEXANDRITE_BOW.get());
+                        output.accept(ModItems.ALEXANDRITE_SHIELD.get());
 
                         output.accept(ModItems.ALEXANDRITE_HELMET.get());
                         output.accept(ModItems.ALEXANDRITE_CHESTPALTE.get());
@@ -41,6 +44,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ALEXANDRITE_HORSE_ARMOR.get());
 
                         output.accept(ModItems.DATA_TABLET.get());
+                        output.accept(ModItems.BAR_BRAWL_RECORD.get());
 
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
@@ -62,6 +66,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ALEXANDRITE_TRAPDOOR.get());
 
                         output.accept(ModBlocks.ALEXANDRITE_LAMP.get());
+                        output.accept(ModBlocks.GEM_EMPOWERING_STATION.get());
 
                         output.accept(ModBlocks.SNAPDRAGON.get());
                     }).build());

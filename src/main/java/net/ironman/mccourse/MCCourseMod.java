@@ -2,10 +2,14 @@ package net.ironman.mccourse;
 
 import com.mojang.logging.LogUtils;
 import net.ironman.mccourse.block.ModBlocks;
+import net.ironman.mccourse.effect.ModEffects;
 import net.ironman.mccourse.enchantment.ModEnchantments;
 import net.ironman.mccourse.item.ModCreativeModeTabs;
 import net.ironman.mccourse.item.ModItemProperties;
 import net.ironman.mccourse.item.ModItems;
+import net.ironman.mccourse.loot.ModLootModifiers;
+import net.ironman.mccourse.painting.ModPaintings;
+import net.ironman.mccourse.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -37,7 +41,10 @@ public class MCCourseMod {
         ModBlocks.register(modEventBus);
 
         ModEnchantments.register(modEventBus);
-
+        ModSounds.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
+        ModPaintings.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
