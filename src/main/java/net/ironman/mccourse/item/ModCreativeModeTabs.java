@@ -78,6 +78,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.WALNUT_LEAVES.get());
                         output.accept(ModBlocks.WALNUT_SAPLING.get());
 
+                        output.accept(ModItems.WALNUT_SIGN.get());
+                        output.accept(ModItems.WALNUT_HANGING_SIGN.get());
+
                     }).build());
 
 

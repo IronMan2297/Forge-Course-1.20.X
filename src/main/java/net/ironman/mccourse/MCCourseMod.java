@@ -19,10 +19,12 @@ import net.ironman.mccourse.recipe.ModRecipes;
 import net.ironman.mccourse.screen.GemEmpoweringStationScreen;
 import net.ironman.mccourse.screen.ModMenuTypes;
 import net.ironman.mccourse.sound.ModSounds;
+import net.ironman.mccourse.util.ModWoodTypes;
 import net.ironman.mccourse.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
@@ -119,6 +121,8 @@ public class MCCourseMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
+                Sheets.addWoodType(ModWoodTypes.WALNUT);
+
                 ModItemProperties.addCustomItemProperties();
 
                 ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SOAP_WATER.get(), RenderType.translucent());
