@@ -25,9 +25,17 @@
   "item.mccourse.alexandrite_horse_armor": "Alexandrite Horse Armor",
   "item.mccourse.kohlrabi_seeds": "Kohlrabi Seeds",
   "item.mccourse.radiation_staff": "Radiation Staff",
+  "item.mccourse.soap_water_bucket": "Soap Water Bucket",
+
+  "item.mccourse.load": "Load...",
 
   "item.mccourse.bar_brawl_record": "Bar Brawl Music Disc",
   "item.mccourse.bar_brawl_record.desc": "Bryan Tech - Bar Brawl (CC0)",
+
+  "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
+
 
   "block.mccourse.alexandrite_block": "Block of Alexandrite",
   "block.mccourse.raw_alexandrite_block": "Block of Raw Alexandrite",
@@ -49,6 +57,16 @@
   "block.mccourse.snapdragon": "Snapdragon",
   "block.mccourse.gem_empowering_station": "Gem Empowering Station",
 
+
+  "block.mccourse.walnut_log": "Walnut Log",
+  "block.mccourse.walnut_planks": "Walnut Planks",
+  "block.mccourse.walnut_wood": "Walnut Wood",
+  "block.mccourse.stripped_walnut_log": "Stripped Walnut Log",
+  "block.mccourse.stripped_walnut_wood": "Stripped Walnut Wood",
+  "block.mccourse.walnut_leaves": "Walnut Leaves",
+
+  "block.mccourse.walnut_sapling": "Walnut Sapling",
+
   "creativetab.course_tab": "Course Tab",
 
   "enchantment.mccourse.lightning_striker": "Lightning Striker",
@@ -68,5 +86,7 @@
 
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Blocks to Find Valuables!",
   "tooltip.mccourse.metal_detector.tooltip": "Press §eSHIFT§r for more Information",
-  "tooltip.mccourse.soundblock.tooltip": "Plays nice Sounds when walking or right-clicking"
+  "tooltip.mccourse.soundblock.tooltip": "Plays nice Sounds when walking or right-clicking",
+
+  "entity.minecraft.villager.mccourse.soundmaster": "Soundmaster"
 }

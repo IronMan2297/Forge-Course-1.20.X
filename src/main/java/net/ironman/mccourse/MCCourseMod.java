@@ -2,20 +2,36 @@ package net.ironman.mccourse;
 
 import com.mojang.logging.LogUtils;
 import net.ironman.mccourse.block.ModBlocks;
+import net.ironman.mccourse.block.entity.ModBlockEntities;
 import net.ironman.mccourse.effect.ModEffects;
 import net.ironman.mccourse.enchantment.ModEnchantments;
+import net.ironman.mccourse.fluid.ModFluidTypes;
+import net.ironman.mccourse.fluid.ModFluids;
 import net.ironman.mccourse.item.ModCreativeModeTabs;
 import net.ironman.mccourse.item.ModItemProperties;
 import net.ironman.mccourse.item.ModItems;
 import net.ironman.mccourse.loot.ModLootModifiers;
 import net.ironman.mccourse.painting.ModPaintings;
+import net.ironman.mccourse.particle.ModParticles;
+import net.ironman.mccourse.potion.BetterBrewingRecipe;
+import net.ironman.mccourse.potion.ModPotions;
+import net.ironman.mccourse.recipe.ModRecipes;
+import net.ironman.mccourse.screen.GemEmpoweringStationScreen;
+import net.ironman.mccourse.screen.ModMenuTypes;
 import net.ironman.mccourse.sound.ModSounds;
+import net.ironman.mccourse.villager.ModVillagers;
+import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -42,9 +58,23 @@ public class MCCourseMod {
 
         ModEnchantments.register(modEventBus);
         ModSounds.register(modEventBus);
+
         ModLootModifiers.register(modEventBus);
         ModPaintings.register(modEventBus);
+
         ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
+        ModParticles.register(modEventBus);
+
+        ModFluidTypes.register(modEventBus);
+        ModFluids.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -59,6 +89,9 @@ public class MCCourseMod {
             ComposterBlock.COMPOSTABLES.put(ModBlocks.SNAPDRAGON.get(), 0.65f);
 
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.SNAPDRAGON.getId(), ModBlocks.POTTED_SNAPDRAGON);
+
+            BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION.get()));
+
         });
     }
 
@@ -88,6 +121,10 @@ public class MCCourseMod {
             event.enqueueWork(() -> {
                 ModItemProperties.addCustomItemProperties();
 
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SOAP_WATER.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SOAP_WATER.get(), RenderType.translucent());
+
+                MenuScreens.register(ModMenuTypes.GEM_EMPOWERING_MENU.get(), GemEmpoweringStationScreen::new);
             });
         }
     }

@@ -45,6 +45,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         //simpleItem(ModItems.DATA_TABLET);
         simpleItem(ModItems.KOHLRABI_SEEDS);
         simpleItem(ModItems.BAR_BRAWL_RECORD);
+        simpleItem(ModItems.SOAP_WATER_BUCKET);
 
         buttonItem(ModBlocks.ALEXANDRITE_BUTTON, ModBlocks.ALEXANDRITE_BLOCK);
         fenceItem(ModBlocks.ALEXANDRITE_FENCE, ModBlocks.ALEXANDRITE_BLOCK);
@@ -54,6 +55,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.SNAPDRAGON);
 
         complexBlock(ModBlocks.GEM_EMPOWERING_STATION.get());
+
+        saplingItem(ModBlocks.WALNUT_SAPLING);
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(MCCourseMod.MOD_ID, "block/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder complexBlock(Block block) {
