@@ -2,11 +2,13 @@ package net.ironman.mccourse.item;
 
 import net.ironman.mccourse.MCCourseMod;
 import net.ironman.mccourse.block.ModBlocks;
+import net.ironman.mccourse.entity.ModEntities;
 import net.ironman.mccourse.fluid.ModFluids;
 import net.ironman.mccourse.item.custom.*;
 import net.ironman.mccourse.sound.ModSounds;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -83,6 +85,9 @@ public class ModItems {
     public static final RegistryObject<Item> WALNUT_HANGING_SIGN = ITEMS.register("walnut_hanging_sign",
             () -> new HangingSignItem(ModBlocks.WALNUT_HANGING_SIGN.get(), ModBlocks.WALNUT_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
 
+    public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("rhino_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.RHINO, 0x7e9680, 0xc51c5,
+                    new Item.Properties()));
 
     public static final RegistryObject<Item> LOAD = ITEMS.register("load",
             () -> new Item(new Item.Properties()));
