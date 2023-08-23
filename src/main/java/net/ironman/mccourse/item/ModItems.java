@@ -86,7 +86,7 @@ public class ModItems {
             () -> new HangingSignItem(ModBlocks.WALNUT_HANGING_SIGN.get(), ModBlocks.WALNUT_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
 
     public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("rhino_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntities.RHINO, 0x7e9680, 0xc51c5,
+            () -> new ForgeSpawnEggItem(ModEntities.RHINO,  0x7e9680, 0xc5d1c5,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> LOAD = ITEMS.register("load",
