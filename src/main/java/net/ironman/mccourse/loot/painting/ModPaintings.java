@@ -1,4 +1,4 @@
-package net.ironman.mccourse.painting;
+package net.ironman.mccourse.loot.painting;
 
 import net.ironman.mccourse.MCCourseMod;
 import net.minecraft.world.entity.decoration.PaintingVariant;

@@ -13,7 +13,7 @@ import net.ironman.mccourse.item.ModCreativeModeTabs;
 import net.ironman.mccourse.item.ModItemProperties;
 import net.ironman.mccourse.item.ModItems;
 import net.ironman.mccourse.loot.ModLootModifiers;
-import net.ironman.mccourse.painting.ModPaintings;
+import net.ironman.mccourse.loot.painting.ModPaintings;
 import net.ironman.mccourse.particle.ModParticles;
 import net.ironman.mccourse.potion.BetterBrewingRecipe;
 import net.ironman.mccourse.potion.ModPotions;
