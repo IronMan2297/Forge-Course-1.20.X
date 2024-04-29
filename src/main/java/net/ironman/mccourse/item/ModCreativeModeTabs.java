@@ -44,6 +44,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ALEXANDRITE_HORSE_ARMOR.get());
 
                         output.accept(ModItems.DATA_TABLET.get());
+                        output.accept(ModItems.DICE.get());
                         output.accept(ModItems.BAR_BRAWL_RECORD.get());
                         output.accept(ModItems.SOAP_WATER_BUCKET.get());
                         output.accept(ModItems.RHINO_SPAWN_EGG.get());

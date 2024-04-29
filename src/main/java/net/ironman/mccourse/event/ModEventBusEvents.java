@@ -2,6 +2,7 @@ package net.ironman.mccourse.event;
 
 import net.ironman.mccourse.MCCourseMod;
 import net.ironman.mccourse.entity.ModEntities;
+import net.ironman.mccourse.entity.client.MagicProjectileModel;
 import net.ironman.mccourse.entity.client.RhinoModel;
 import net.ironman.mccourse.entity.custom.RhinoEntity;
 import net.ironman.mccourse.entity.layers.ModModelLayers;
@@ -19,6 +20,7 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.RHINO_LAYER, RhinoModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.MAGIC_PROJECTILE_LAYER, MagicProjectileModel::createBodyLayer);
     }
 
     @SubscribeEvent

@@ -1,6 +1,8 @@
 package net.ironman.mccourse.entity;
 
 import net.ironman.mccourse.MCCourseMod;
+import net.ironman.mccourse.entity.custom.DiceProjectileEntity;
+import net.ironman.mccourse.entity.custom.MagicProjectileEntity;
 import net.ironman.mccourse.entity.custom.RhinoEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -16,6 +18,23 @@ public class ModEntities {
     public static final RegistryObject<EntityType<RhinoEntity>> RHINO =
             ENTITY_TYPES.register("rhino", () -> EntityType.Builder.of(RhinoEntity::new, MobCategory.CREATURE)
                     .sized(2.5f,2.5f).build("rhino"));
+
+    public static final RegistryObject<EntityType<DiceProjectileEntity>> DICE_PROJECTILE =
+            ENTITY_TYPES.register("dice_projectile",
+                    () -> EntityType.Builder.<DiceProjectileEntity>of(DiceProjectileEntity:: new, MobCategory.MISC)
+                            .sized(0.5f, 0.5f)
+                            .clientTrackingRange(4)
+                            .updateInterval(20)
+                            .setCustomClientFactory((spawnEntity, level) -> new DiceProjectileEntity(level))
+                            .build("dice_projectile"));
+
+    public static final RegistryObject<EntityType<MagicProjectileEntity>> MAGIC_PROJECTILE =
+            ENTITY_TYPES.register("magic_projectile",
+                    () -> EntityType.Builder.<MagicProjectileEntity>of(MagicProjectileEntity:: new, MobCategory.MISC)
+                            .sized(0.5f, 0.5f)
+                            .clientTrackingRange(4)
+                            .updateInterval(20)
+                            .build("magic_projectile"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

@@ -69,7 +69,7 @@ public class ModItems {
             () -> new RecordItem(4, ModSounds.BAR_BRAWL, new Item.Properties().stacksTo(1),2440));
 
     public static final RegistryObject<Item> RADIATION_STAFF = ITEMS.register("radiation_staff",
-            () -> new Item(new Item.Properties().durability(1024)));
+            () -> new RadiationStaffItem(new Item.Properties().durability(1024)));
 
     public static final RegistryObject<Item> ALEXANDRITE_BOW = ITEMS.register("alexandrite_bow",
             () -> new BowItem(new Item.Properties().durability(500)));
@@ -88,6 +88,9 @@ public class ModItems {
     public static final RegistryObject<Item> RHINO_SPAWN_EGG = ITEMS.register("rhino_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.RHINO,  0x7e9680, 0xc5d1c5,
                     new Item.Properties()));
+
+    public static final RegistryObject<Item> DICE = ITEMS.register("dice",
+            () -> new DiceItem(new Item.Properties()));
 
     public static final RegistryObject<Item> LOAD = ITEMS.register("load",
             () -> new Item(new Item.Properties()));

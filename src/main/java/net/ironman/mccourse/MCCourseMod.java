@@ -6,6 +6,7 @@ import net.ironman.mccourse.block.entity.ModBlockEntities;
 import net.ironman.mccourse.effect.ModEffects;
 import net.ironman.mccourse.enchantment.ModEnchantments;
 import net.ironman.mccourse.entity.ModEntities;
+import net.ironman.mccourse.entity.client.MagicProjectileRenderer;
 import net.ironman.mccourse.entity.client.RhinoRenderer;
 import net.ironman.mccourse.fluid.ModFluidTypes;
 import net.ironman.mccourse.fluid.ModFluids;
@@ -28,6 +29,7 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potions;
@@ -135,6 +137,8 @@ public class MCCourseMod {
                 MenuScreens.register(ModMenuTypes.GEM_EMPOWERING_MENU.get(), GemEmpoweringStationScreen::new);
 
                 EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
+                EntityRenderers.register(ModEntities.DICE_PROJECTILE.get(), ThrownItemRenderer::new);
+                EntityRenderers.register(ModEntities.MAGIC_PROJECTILE.get(), MagicProjectileRenderer::new);
             });
         }
     }
