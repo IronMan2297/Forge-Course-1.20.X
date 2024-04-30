@@ -3,6 +3,7 @@ package net.ironman.mccourse.item;
 import net.ironman.mccourse.MCCourseMod;
 import net.ironman.mccourse.block.ModBlocks;
 import net.ironman.mccourse.entity.ModEntities;
+import net.ironman.mccourse.entity.custom.ModBoatEntity;
 import net.ironman.mccourse.fluid.ModFluids;
 import net.ironman.mccourse.item.custom.*;
 import net.ironman.mccourse.sound.ModSounds;
@@ -91,6 +92,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> DICE = ITEMS.register("dice",
             () -> new DiceItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> WALNUT_BOAT = ITEMS.register("walnut_boat",
+            () -> new ModBoatItem(false, ModBoatEntity.Type.WALNUT, new Item.Properties()));
+
+    public static final RegistryObject<Item> WALNUT_CHEST_BOAT = ITEMS.register("walnut_chest_boat",
+            () -> new ModBoatItem(true, ModBoatEntity.Type.WALNUT, new Item.Properties()));
 
     public static final RegistryObject<Item> LOAD = ITEMS.register("load",
             () -> new Item(new Item.Properties()));

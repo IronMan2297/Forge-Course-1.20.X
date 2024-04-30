@@ -38,6 +38,8 @@
   "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
 
   "item.mccourse.dice": "Dice",
+  "item.mccourse.walnut_boat": "Walnut Boat",
+  "item.mccourse.walnut_chest_boat": "Walnut Boat with Chest",
 
 
   "block.mccourse.alexandrite_block": "Block of Alexandrite",
@@ -94,5 +96,7 @@
   "tooltip.mccourse.metal_detector.tooltip": "Press §eSHIFT§r for more Information",
   "tooltip.mccourse.soundblock.tooltip": "Plays nice Sounds when walking or right-clicking",
 
-  "entity.minecraft.villager.mccourse.soundmaster": "Soundmaster"
+  "entity.minecraft.villager.mccourse.soundmaster": "Soundmaster",
+
+  "entity.mccourse.mod_chest_boat": "Boat with Chest"
 }

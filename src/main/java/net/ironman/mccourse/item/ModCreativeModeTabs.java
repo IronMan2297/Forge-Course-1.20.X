@@ -82,6 +82,8 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.WALNUT_SIGN.get());
                         output.accept(ModItems.WALNUT_HANGING_SIGN.get());
+                        output.accept(ModItems.WALNUT_BOAT.get());
+                        output.accept(ModItems.WALNUT_CHEST_BOAT.get());
 
                     }).build());
 

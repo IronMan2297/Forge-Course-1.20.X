@@ -7,6 +7,7 @@ import net.ironman.mccourse.effect.ModEffects;
 import net.ironman.mccourse.enchantment.ModEnchantments;
 import net.ironman.mccourse.entity.ModEntities;
 import net.ironman.mccourse.entity.client.MagicProjectileRenderer;
+import net.ironman.mccourse.entity.client.ModBoatRenderer;
 import net.ironman.mccourse.entity.client.RhinoRenderer;
 import net.ironman.mccourse.fluid.ModFluidTypes;
 import net.ironman.mccourse.fluid.ModFluids;
@@ -139,6 +140,9 @@ public class MCCourseMod {
                 EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
                 EntityRenderers.register(ModEntities.DICE_PROJECTILE.get(), ThrownItemRenderer::new);
                 EntityRenderers.register(ModEntities.MAGIC_PROJECTILE.get(), MagicProjectileRenderer::new);
+
+                EntityRenderers.register(ModEntities.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
+                EntityRenderers.register(ModEntities.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
             });
         }
     }
