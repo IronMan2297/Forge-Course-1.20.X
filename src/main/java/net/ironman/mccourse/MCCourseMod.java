@@ -25,6 +25,8 @@ import net.ironman.mccourse.screen.ModMenuTypes;
 import net.ironman.mccourse.sound.ModSounds;
 import net.ironman.mccourse.util.ModWoodTypes;
 import net.ironman.mccourse.villager.ModVillagers;
+import net.ironman.mccourse.worldgen.tree.ModFoliagePlacerType;
+import net.ironman.mccourse.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -84,6 +86,9 @@ public class MCCourseMod {
 
         ModRecipes.register(modEventBus);
         ModEntities.register(modEventBus);
+
+        ModTrunkPlacerTypes.register(modEventBus);
+        ModFoliagePlacerType.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
