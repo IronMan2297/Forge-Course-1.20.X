@@ -77,8 +77,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.STRIPPED_WALNUT_LOG.get());
                         output.accept(ModBlocks.STRIPPED_WALNUT_WOOD.get());
                         output.accept(ModBlocks.WALNUT_PLANKS.get());
-                        output.accept(ModBlocks.WALNUT_LEAVES.get());
                         output.accept(ModBlocks.WALNUT_SAPLING.get());
+                        output.accept(ModBlocks.WALNUT_LEAVES.get());
+                        output.accept(ModBlocks.COLORED_LEAVES.get());
 
                         output.accept(ModItems.WALNUT_SIGN.get());
                         output.accept(ModItems.WALNUT_HANGING_SIGN.get());
