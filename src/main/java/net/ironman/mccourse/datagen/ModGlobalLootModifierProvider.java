@@ -3,6 +3,7 @@ package net.ironman.mccourse.datagen;
 import net.ironman.mccourse.MCCourseMod;
 import net.ironman.mccourse.item.ModItems;
 import net.ironman.mccourse.loot.AddItemModifier;
+import net.ironman.mccourse.loot.AddSusSandItemModifier;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
@@ -28,6 +29,10 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
 
         add("metal_detector_from_jungle_temple", new AddItemModifier(new LootItemCondition[] {
                new LootTableIdCondition.Builder(new ResourceLocation("chest/jungle_temple")).build() },
+                ModItems.METAL_DETECTOR.get()));
+
+        add("metal_detector_from_suspicious_sand", new AddSusSandItemModifier(new LootItemCondition[] {
+               new LootTableIdCondition.Builder(new ResourceLocation("archaeology/desert_pyramid")).build() },
                 ModItems.METAL_DETECTOR.get()));
     }
 }
