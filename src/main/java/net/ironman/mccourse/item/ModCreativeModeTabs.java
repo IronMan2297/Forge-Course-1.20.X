@@ -49,6 +49,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SOAP_WATER_BUCKET.get());
                         output.accept(ModItems.RHINO_SPAWN_EGG.get());
 
+                        output.accept(ModItems.CATTAIL.get());
+                        output.accept(ModItems.CATTAIL_SEEDS.get());
+
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
 

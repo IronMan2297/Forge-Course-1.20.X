@@ -99,8 +99,10 @@ public class ModItems {
     public static final RegistryObject<Item> WALNUT_CHEST_BOAT = ITEMS.register("walnut_chest_boat",
             () -> new ModBoatItem(true, ModBoatEntity.Type.WALNUT, new Item.Properties()));
 
-    public static final RegistryObject<Item> LOAD = ITEMS.register("load",
+    public static final RegistryObject<Item> CATTAIL = ITEMS.register("cattail",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CATTAIL_SEEDS = ITEMS.register("cattail_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.CATTAIL_CROP.get(), new Item.Properties()));
 
 
 

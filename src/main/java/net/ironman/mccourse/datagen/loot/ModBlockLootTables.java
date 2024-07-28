@@ -1,6 +1,7 @@
 package net.ironman.mccourse.datagen.loot;
 
 import net.ironman.mccourse.block.ModBlocks;
+import net.ironman.mccourse.block.custom.CattailCropBlock;
 import net.ironman.mccourse.block.custom.KohlrabiCropBlock;
 import net.ironman.mccourse.item.ModItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -79,6 +80,21 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 createSingleItemTable(ModItems.WALNUT_SIGN.get()));
         this.add(ModBlocks.WALNUT_WALL_HANGING_SIGN.get(), block ->
                 createSingleItemTable(ModItems.WALNUT_HANGING_SIGN.get()));
+
+        //This if Only top Block drop something
+        //LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.CATTAIL_CROP.get())
+        //        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CattailCropBlock.AGE, 8));
+        //this.add(ModBlocks.CATTAIL_CROP.get(), this.createCropDrops(ModBlocks.CATTAIL_CROP.get(),
+        //        ModItems.CATTAIL.get(), ModItems.CATTAIL_SEEDS.get(), lootitemcondition$builder2));
+
+        LootItemCondition.Builder lootitemcondition$builder2 = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.CATTAIL_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CattailCropBlock.AGE, 7))
+                .or(LootItemBlockStatePropertyCondition
+                        .hasBlockStateProperties(ModBlocks.CATTAIL_CROP.get())
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CattailCropBlock.AGE, 8)));
+
+        this.add(ModBlocks.CATTAIL_CROP.get(), createCropDrops(ModBlocks.CATTAIL_CROP.get(), ModItems.CATTAIL.get(),
+                ModItems.CATTAIL_SEEDS.get(), lootitemcondition$builder2));
     }
 
     @Override
