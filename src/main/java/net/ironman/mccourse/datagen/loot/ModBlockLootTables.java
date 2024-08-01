@@ -69,6 +69,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.WALNUT_SAPLING.get());
         this.dropSelf(ModBlocks.COLORED_LEAVES.get());
 
+        this.dropSelf(ModBlocks.KAUPEN_PORTAL.get());
+
         this.add(ModBlocks.WALNUT_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.WALNUT_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
