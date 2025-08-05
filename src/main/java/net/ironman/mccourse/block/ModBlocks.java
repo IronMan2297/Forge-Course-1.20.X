@@ -71,7 +71,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> ALEXANDRITE_WALL = registerBlock("alexandrite_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
-    public static final RegistryObject<Block> ALEXANDRITE_DOOR= registerBlock("alexandrite_door",
+    public static final RegistryObject<Block> ALEXANDRITE_DOOR = registerBlock("alexandrite_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), BlockSetType.IRON));
     public static final RegistryObject<Block> ALEXANDRITE_TRAPDOOR = registerBlock("alexandrite_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK), BlockSetType.IRON));
@@ -181,6 +181,28 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> KAUPEN_PORTAL = registerBlock("kaupen_portal",
             () -> new KaupenPortalBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_PORTAL).noLootTable().noOcclusion().noCollission()));
+
+    public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block",
+            () -> new DegradableRubyBlock(GemDegradable.GemDegradationLevel.UNAFFECTED,
+                    BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> EXPOSED_RUBY_BLOCK = registerBlock("exposed_ruby_block",
+            () -> new DegradableRubyBlock(GemDegradable.GemDegradationLevel.EXPOSED,
+                    BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> WEATHERED_RUBY_BLOCK = registerBlock("weathered_ruby_block",
+            () -> new DegradableRubyBlock(GemDegradable.GemDegradationLevel.WEATHERED,
+                    BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> DEGRADED_RUBY_BLOCK = registerBlock("degraded_ruby_block",
+            () -> new DegradableRubyBlock(GemDegradable.GemDegradationLevel.DEGRADED,
+                    BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> WAXED_RUBY_BLOCK = registerBlock("waxed_ruby_block",
+            () -> new Block(BlockBehaviour.Properties.copy(RUBY_BLOCK.get())));
+    public static final RegistryObject<Block> WAXED_EXPOSED_RUBY_BLOCK = registerBlock("waxed_exposed_ruby_block",
+            () -> new Block(BlockBehaviour.Properties.copy(EXPOSED_RUBY_BLOCK.get())));
+    public static final RegistryObject<Block> WAXED_WEATHERED_RUBY_BLOCK = registerBlock("waxed_weathered_ruby_block",
+            () -> new Block(BlockBehaviour.Properties.copy(WEATHERED_RUBY_BLOCK.get())));
+    public static final RegistryObject<Block> WAXED_DEGRADED_RUBY_BLOCK = registerBlock("waxed_degraded_ruby_block",
+            () -> new Block(BlockBehaviour.Properties.copy(DEGRADED_RUBY_BLOCK.get())));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name,block);

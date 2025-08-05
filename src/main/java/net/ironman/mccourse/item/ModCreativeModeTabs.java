@@ -91,6 +91,16 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.COLORED_LEAVES.get());
                         output.accept(ModBlocks.KAUPEN_PORTAL.get());
 
+                        output.accept(ModBlocks.RUBY_BLOCK.get());
+                        output.accept(ModBlocks.EXPOSED_RUBY_BLOCK.get());
+                        output.accept(ModBlocks.WEATHERED_RUBY_BLOCK.get());
+                        output.accept(ModBlocks.DEGRADED_RUBY_BLOCK.get());
+
+                        output.accept(ModBlocks.WAXED_RUBY_BLOCK.get());
+                        output.accept(ModBlocks.WAXED_EXPOSED_RUBY_BLOCK.get());
+                        output.accept(ModBlocks.WAXED_WEATHERED_RUBY_BLOCK.get());
+                        output.accept(ModBlocks.WAXED_DEGRADED_RUBY_BLOCK.get());
+
                     }).build());
 
 
