@@ -6,7 +6,6 @@ import net.ironman.mccourse.item.ModItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -46,6 +45,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 "mccourse:raw_alexandrite", "alexandrite","mccourse:raw_alexandrite_block", "alexandrite");
         oreSmelting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 200, "alexandrite");
         oreBlasting(pWriter, ALEXANDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 0.25f, 100, "alexandrite");
+       // makeSword(pWriter, ModBlocks.RUBY_BLOCK.get(), RecipeCategory.MISC, ModItems.CATTAIL.get(), "has_obsidian");
     }
 
     protected static void oreSmelting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
@@ -68,5 +68,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .save(pFinishedRecipeConsumer, MCCourseMod.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
     }
+ // protected static void makeSword(Consumer<FinishedRecipe> finishedRecipeConsumer, ItemLike pIngredients, RecipeCategory pCategory, ItemLike pResult, String pCriterion) {
+ //     ShapedRecipeBuilder.shaped(pCategory, pResult)
+ //             .pattern(" A ")
+ //             .pattern(" A ")
+ //             .pattern(" S ")
+ //             .define('A', pIngredients)
+ //             .define('S', Items.STICK)
+ //             .unlockedBy(pCriterion, inventoryTrigger(ItemPredicate.Builder.item().
+ //                     of(pIngredients).build()))
+ //             .save(finishedRecipeConsumer, MCCourseMod.MOD_ID + ":" + getItemName(pResult) + "_sword");
+ // }
 
 }
